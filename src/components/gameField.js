@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import WholeTile from '../components/wholeTile';
-import Tile from '../components/tile';
-import Randomizer from '../components/arrayRandomizer';
-import BoldText from '../components/boldText';
-import MainText from '../components/text';
+import Tile from '../components/Tile';
+import Randomize from '../components/arrayRandomizer';
+import Text from '../components/mainText';
 
 import '../index.css';
 
-const field = Randomizer(80, 120);
+const field = Randomize(80, 120);
 
 class GameField extends Component {
   constructor() {
@@ -27,8 +26,8 @@ class GameField extends Component {
     return (
       <div>
         <div className="settings-item">
-          <MainText label="Y&#39;ve mined:" />
-          <BoldText label={this.state.BTC} />
+          <Text label="Y&#39;ve mined:" classprop="main-text" />
+          <Text label={this.state.BTC} classprop="bold-text" />
         </div>
         <div className="game-field">
           {field.map((item, index) =>

@@ -91,7 +91,7 @@
   display: flex;
   align-items: center;
   color: #000000;
-  padding: 1% 2% 1% 2%;
+  padding: 4px 12px 4px 12px;
 }
 
 .raw {
@@ -223,4 +223,40 @@ input[type='range']:focus::-ms-fill-upper {
 
 .school-logo {
   height: 20px;
+}
+
+.wrapper-align-center {
+  height: 100%;
+  padding: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stats-coin {
+  height: 1rem;
+}
+
+.table-data {
+  text-align: right;
+  padding: 4px 12px 4px 12px;
+}
+
+.table-data-headings {
+  border-bottom: 1px solid;
+}
+
+table {
+  border-spacing: 0;
+}
+
+.table-body {
+  margin-top: 1rem;
+}
+
+.game-field-tile {
+  width: 40px;
+  min-height: 40px;
+  border-radius: 4px;
+  background-color: #c4c4c4;
 }
