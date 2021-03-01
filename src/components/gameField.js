@@ -6,8 +6,7 @@ import Text from '../components/mainText';
 
 import '../index.css';
 
-const field = Randomize(80, 120);
-
+const field = Randomize(120, 120);
 class GameField extends Component {
   constructor() {
     super();
@@ -25,16 +24,17 @@ class GameField extends Component {
   render() {
     return (
       <div>
-        <div className="settings-item">
+        <div className="raw">
           <Text label="Y&#39;ve mined:" classprop="main-text" />
           <Text label={this.state.BTC} classprop="bold-text" />
         </div>
+
         <div className="game-field">
           {field.map((item, index) =>
-            item === '0' ? (
-              <Tile key={index} classprop="game-field-tile" />
+            item === 0 ? (
+              <Tile key={index} classprop="game-field-tile-empty" />
             ) : (
-              <WholeTile key={index} onClick={(e) => this.handleClick(e)} />
+              <WholeTile key={index} />
             )
           )}
         </div>

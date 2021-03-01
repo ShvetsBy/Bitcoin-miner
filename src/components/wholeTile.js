@@ -7,10 +7,9 @@ import '../index.css';
 class WholeTile extends Component {
   render() {
     return (
-      // <div className="whole-tile">
-      <div>
+      <div className="whole-tile">
         <Tile classprop="game-field-tile" />
-        {/* <Coin classprop="game-field-coin" /> */}
+        <Coin classprop="game-field-coin" />
       </div>
     );
   }

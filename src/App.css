@@ -92,6 +92,7 @@
   align-items: center;
   color: #000000;
   padding: 4px 12px 4px 12px;
+  height: 36px;
 }
 
 .raw {
@@ -256,7 +257,49 @@ table {
 
 .game-field-tile {
   width: 40px;
-  min-height: 40px;
+  height: 40px;
   border-radius: 4px;
   background-color: #c4c4c4;
+  position: absolute;
+}
+
+.game-field-tile-empty {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #c4c4c4;
+}
+
+.game-field-coin {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+}
+
+.whole-tile {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+}
+
+.game-field {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 3rem;
+}
+
+.game-wrapper {
+  width: 90%;
+  height: 90%;
+  padding: 5%;
+}
+
+.game-top-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

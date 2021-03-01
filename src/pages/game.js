@@ -11,7 +11,7 @@ class Game extends Component {
       <div className="game-wrapper">
         <div className="game-top-panel">
           <MainTitle label="Mine Hard Like the Devil&nbsp;👹" />
-          <Button label="Restart" />
+          <Button label="Restart" classprop="button" />
         </div>
 
         <GameField />
