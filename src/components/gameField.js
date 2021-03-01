@@ -7,19 +7,24 @@ import Text from '../components/mainText';
 import '../index.css';
 
 const field = Randomize(120, 120);
+//положить потом в state
 class GameField extends Component {
   constructor() {
     super();
     this.state = {
       BTC: 0,
+      field: field,
     };
   }
 
-  handleClick(e) {
-    e.preventDefault();
-    console.log(e.target);
-    // this.setState({ BTC: this.state + 1 });
-  }
+  handler = () => {
+    this.setState({ BTC: this.state.BTC + 1 });
+  };
+
+  // handleClick(e) {
+  //   e.preventDefault();
+  //   console.log('click from gamefiled');
+  // }
 
   render() {
     return (
@@ -30,11 +35,11 @@ class GameField extends Component {
         </div>
 
         <div className="game-field">
-          {field.map((item, index) =>
+          {this.state.field.map((item, index) =>
             item === 0 ? (
-              <Tile key={index} classprop="game-field-tile-empty" />
+              <Tile key={index} />
             ) : (
-              <WholeTile key={index} />
+              <WholeTile key={index} handler={this.handler} />
             )
           )}
         </div>

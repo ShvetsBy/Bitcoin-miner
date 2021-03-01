@@ -260,7 +260,9 @@ table {
   height: 40px;
   border-radius: 4px;
   background-color: #c4c4c4;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .game-field-tile-empty {
@@ -270,10 +272,32 @@ table {
   background-color: #c4c4c4;
 }
 
+.game-field-tile-clicked {
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .game-field-coin {
   width: 30px;
   height: 30px;
-  position: absolute;
+  opacity: 0;
+  animation: up 2s;
+}
+
+@keyframes up {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0;
+    margin-top: -200px;
+  }
 }
 
 .whole-tile {
