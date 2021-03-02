@@ -8,7 +8,7 @@ import Volume from '../components/volume';
 import School from '../components/logo';
 import Tile from '../components/Tile';
 import Coin from '../components/coin';
-
+import { Link } from 'react-router-dom';
 import '../App.css';
 
 class Main extends React.Component {
@@ -58,8 +58,17 @@ class Main extends React.Component {
 
           <div className="section">
             <div className="raw">
-              <Button classprop="button" label="Stats" />
-              <Button classprop="button" label="Start game" />
+              <Link className="link" to="/stats">
+                <Button
+                  classprop="button"
+                  label="Stats"
+                  onСlick="window.location.pathname = '/play'"
+                />
+              </Link>
+
+              <Link className="link" to="/game">
+                <Button classprop="button" label="Start game" />
+              </Link>
             </div>
           </div>
           <div className="footer">

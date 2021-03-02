@@ -95,6 +95,10 @@
   height: 36px;
 }
 
+.button:hover {
+  background-color: #a24936;
+  color: white;
+}
 .raw {
   display: flex;
   gap: 1rem;
@@ -326,4 +330,8 @@ table {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.link {
+  text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MainTitle from '../components/pageTitle';
 import Table from '../components/table';
 import Button from '../components/button';
+import { Link } from 'react-router-dom';
 
 import '../App.css';
 const stats = [
@@ -55,10 +56,9 @@ class Stats extends React.Component {
         </div>
 
         <div className="header">
-          <div className="raw">
-            <Button classprop="button" label="Stats" />
+          <Link className="link" to="/">
             <Button classprop="button" label="Menu" />
-          </div>
+          </Link>
         </div>
       </div>
     );

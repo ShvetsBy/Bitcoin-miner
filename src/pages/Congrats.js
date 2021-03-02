@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import MainTitle from '../components/pageTitle';
 import Text from '../components/mainText';
 import Button from '../components/button';
+import { Link } from 'react-router-dom';
 
 import '../App.css';
 
@@ -21,8 +22,12 @@ class Congrats extends React.Component {
 
         <div className="header">
           <div className="raw">
-            <Button classprop="button" label="Stats" />
-            <Button classprop="button" label="Menu" />
+            <Link className="link" to="/stats">
+              <Button classprop="button" label="Stats" />
+            </Link>
+            <Link className="link" to="/">
+              <Button classprop="button" label="Menu" />
+            </Link>
           </div>
         </div>
       </div>
