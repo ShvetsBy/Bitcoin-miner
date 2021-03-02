@@ -6,6 +6,17 @@ import GameField from '../components/gameField';
 import '../index.css';
 
 class Game extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.countdown = setInterval(
+      () => (window.location.pathname = '/congrats'),
+      30000
+    );
+  }
+
   render() {
     return (
       <div className="game-wrapper">
