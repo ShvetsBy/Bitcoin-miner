@@ -6,14 +6,12 @@ import Text from '../components/mainText';
 
 import '../index.css';
 
-const field = Randomize(120, 120);
-//положить потом в state
 class GameField extends Component {
   constructor() {
     super();
     this.state = {
       BTC: 0,
-      field: field,
+      field: Randomize(parseInt(localStorage.empty), localStorage.size),
     };
   }
 

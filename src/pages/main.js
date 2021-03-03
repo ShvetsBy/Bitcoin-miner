@@ -1,22 +1,41 @@
-import React, { Component } from 'react';
-import MainTitle from '../components/pageTitle';
-import Text from '../components/mainText';
-import Button from '../components/button';
-import Dropdown from '../components/dropdown';
-import Input from '../components/input';
-import Volume from '../components/volume';
-import School from '../components/logo';
-import Tile from '../components/Tile';
-import Coin from '../components/coin';
-import { Link } from 'react-router-dom';
-import '../App.css';
+import React, { Component } from "react";
+import MainTitle from "../components/pageTitle";
+import Text from "../components/mainText";
+import Button from "../components/button";
+import Dropdown from "../components/dropdown";
+import Volume from "../components/volume";
+import School from "../components/logo";
+import Tile from "../components/Tile";
+import Coin from "../components/coin";
+import NameBlock from "../modules/name";
+import FieldSetting from "../modules/fieldSettings";
+import { Link } from "react-router-dom";
+import "../App.css";
 
 class Main extends React.Component {
+  generateField() {
+    if (!localStorage.getItem("size")) {
+      localStorage.setItem("empty", 160);
+    } else if (localStorage.getItem("size") === "0") {
+      localStorage.setItem("empty", 160);
+    } else if (localStorage.getItem("size") === "1") {
+      localStorage.setItem("empty", 200);
+    } else if (localStorage.getItem("size") === "2") {
+      localStorage.setItem("empty", 240);
+    }
+
+    if (!localStorage.getItem("yeild")) {
+      localStorage.setItem("empty", 80);
+    } else if (localStorage.getItem("yeild") === "0") {
+      localStorage.setItem("empty", 80);
+    } else if (localStorage.getItem("yeild") === "1") {
+      localStorage.setItem("empty", 100);
+    } else if (localStorage.getItem("yeild") === "2") {
+      localStorage.setItem("empty", 120);
+    }
+  }
   render() {
-    const time = [30, 45, 90];
-    const fieldSize = ['small', 'normal', 'large'];
-    const yeild = ['Mongolian Steppe', 'European Average', 'Belorusian Magic'];
-    const music = ['On', 'off'];
+    const music = ["On", "off"];
     return (
       <div className="wrapper">
         <section className="content">
@@ -26,25 +45,11 @@ class Main extends React.Component {
             <Text classprop="accent-text" label="Tap as hard, as you can" />
           </div>
           <div className="section">
-            <div className="raw">
-              <Text classprop="main-text" label="Enter your name" />
-              <Input />
-            </div>
+            <NameBlock />
           </div>
-          <div className="section">
-            <div className="raw">
-              <Text classprop="main-text" label="Time:" />
-              <Dropdown data={time} />
-            </div>
-            <div className="raw">
-              <Text classprop="main-text" label="Field size:" />
-              <Dropdown data={fieldSize} />
-            </div>
-            <div className="raw">
-              <Text classprop="main-text" label="Yeild:" />
-              <Dropdown data={yeild} />
-            </div>
-          </div>
+
+          <FieldSetting />
+
           <div className="section">
             <div className="raw">
               <Text classprop="main-text" label="Music:" />

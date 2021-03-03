@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainTitle from '../components/pageTitle';
 import Button from '../components/button';
-import GameField from '../components/gameField';
+import GameField from '../modules/gameField';
 
 import '../index.css';
 

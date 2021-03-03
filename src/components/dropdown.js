@@ -1,11 +1,13 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Dropdown extends React.Component {
   render() {
     return (
-      <select className="dropdown">
-        {this.props.data.map((item, index) => (
-          <option key={index}>{item}</option>
+      <select className="dropdown" onChange={this.props.onChange}>
+        {this.props.data.map((item) => (
+          <option key={item} value={item}>
+            {item}
+          </option>
         ))}
       </select>
     );
