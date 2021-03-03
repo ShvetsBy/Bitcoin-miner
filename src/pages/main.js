@@ -11,29 +11,9 @@ import NameBlock from "../modules/name";
 import FieldSetting from "../modules/fieldSettings";
 import { Link } from "react-router-dom";
 import "../App.css";
+import { fieldCalc } from "../components/fieldCalc";
 
 class Main extends React.Component {
-  generateField() {
-    if (!localStorage.getItem("size")) {
-      localStorage.setItem("empty", 160);
-    } else if (localStorage.getItem("size") === "0") {
-      localStorage.setItem("empty", 160);
-    } else if (localStorage.getItem("size") === "1") {
-      localStorage.setItem("empty", 200);
-    } else if (localStorage.getItem("size") === "2") {
-      localStorage.setItem("empty", 240);
-    }
-
-    if (!localStorage.getItem("yeild")) {
-      localStorage.setItem("empty", 80);
-    } else if (localStorage.getItem("yeild") === "0") {
-      localStorage.setItem("empty", 80);
-    } else if (localStorage.getItem("yeild") === "1") {
-      localStorage.setItem("empty", 100);
-    } else if (localStorage.getItem("yeild") === "2") {
-      localStorage.setItem("empty", 120);
-    }
-  }
   render() {
     const music = ["On", "off"];
     return (
@@ -72,7 +52,11 @@ class Main extends React.Component {
               </Link>
 
               <Link className="link" to="/game">
-                <Button classprop="button" label="Start game" />
+                <Button
+                  classprop="button"
+                  label="Start game"
+                  onСlick={fieldCalc()}
+                />
               </Link>
             </div>
           </div>

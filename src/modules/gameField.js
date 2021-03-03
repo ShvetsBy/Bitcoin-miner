@@ -1,17 +1,20 @@
-import React, { Component } from 'react';
-import WholeTile from '../components/wholeTile';
-import Tile from '../components/Tile';
-import Randomize from '../components/arrayRandomizer';
-import Text from '../components/mainText';
+import React, { Component } from "react";
+import WholeTile from "../components/wholeTile";
+import Tile from "../components/Tile";
+import Randomize from "../components/arrayRandomizer";
+import Text from "../components/mainText";
 
-import '../index.css';
+import "../index.css";
 
 class GameField extends Component {
   constructor() {
     super();
     this.state = {
       BTC: 0,
-      field: Randomize(parseInt(localStorage.empty), localStorage.size),
+      field: Randomize(
+        parseInt(localStorage.emptyTiles),
+        parseInt(localStorage.yeildTiles)
+      ),
     };
   }
 
@@ -28,7 +31,8 @@ class GameField extends Component {
     return (
       <div>
         <div className="raw">
-          <Text label="Y&#39;ve mined:" classprop="main-text" />
+          <Text label={localStorage.name} classprop="bold-text" />
+          <Text label="you&#39;ve mined:" classprop="main-text" />
           <Text label={this.state.BTC} classprop="bold-text" />
         </div>
 

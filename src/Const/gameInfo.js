@@ -5,7 +5,7 @@ export const gameInfo = {
   },
   size: {
     localstoragekey: "size",
-    data: { small: 160, normal: 200, large: 240 },
+    data: { Small: 160, Normal: 200, Large: 240 },
   },
   yeild: {
     localstoragekey: "yeild",
