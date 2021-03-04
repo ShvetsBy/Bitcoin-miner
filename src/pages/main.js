@@ -12,10 +12,10 @@ import FieldSetting from "../modules/fieldSettings";
 import { Link } from "react-router-dom";
 import "../App.css";
 import { fieldCalc } from "../components/fieldCalc";
+import Sounds from "../components/playSound";
 
 class Main extends React.Component {
   render() {
-    const music = ["On", "off"];
     return (
       <div className="wrapper">
         <section className="content">
@@ -30,16 +30,7 @@ class Main extends React.Component {
 
           <FieldSetting />
 
-          <div className="section">
-            <div className="raw">
-              <Text classprop="main-text" label="Music:" />
-              <Dropdown data={music} />
-            </div>
-            <div className="raw">
-              <Text classprop="main-text" label="Volume:" />
-              <Volume />
-            </div>
-          </div>
+          <Sounds />
 
           <div className="section">
             <div className="raw">
@@ -68,12 +59,16 @@ class Main extends React.Component {
               <a href="https://github.com/ShvetsBy" target="_blanc">
                 <Text classprop="small-text" label="Ivan Shvets, 2021" />
               </a>
+              <a href="https://www.zapsplat.com/" target="_blanc">
+                <Text classprop="small-text" label=" Sound from Zapsplat.com" />
+              </a>
             </div>
           </div>
         </section>
         <section className="illustration">
-          <Coin classprop="illustration-coin" />
-          <Tile classprop="illustration-tile" />
+          <div className="illustration-tile">
+            <Coin classprop="illustration-coin" />
+          </div>
         </section>
       </div>
     );

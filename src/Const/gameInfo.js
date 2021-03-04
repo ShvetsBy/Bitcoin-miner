@@ -15,4 +15,8 @@ export const gameInfo = {
       "Belorusian Magic": 0.8,
     },
   },
+  sound: {
+    localstoragekey: "sound",
+    data: ["On", "Off"],
+  },
 };

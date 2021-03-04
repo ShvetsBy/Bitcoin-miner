@@ -34,7 +34,6 @@ class Game extends Component {
           >
             {({ remainingTime }) => remainingTime}
           </CountdownCircleTimer>
-          <Button label="Restart" classprop="button" />
         </div>
 
         <GameField />

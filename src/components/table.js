@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import MainTitle from '../components/pageTitle';
-import Text from '../components/mainText';
-import Coin from '../components/coin';
+import React, { Component } from "react";
+import MainTitle from "../components/pageTitle";
+import Text from "../components/mainText";
+import Coin from "../components/coin";
 
-import '../App.css';
+import "../App.css";
 
 const TableHeader = () => {
   return (
@@ -18,9 +18,6 @@ const TableHeader = () => {
         <th className="table-data-headings">
           <Text classprop="bold-text" label="Time" />
         </th>
-        <th className="table-data-headings">
-          <Text classprop="bold-text" label="Date" />
-        </th>
       </tr>
     </thead>
   );
@@ -31,16 +28,14 @@ const TableBody = (props) => {
     return (
       <tr key={index}>
         <td className="table-data">
-          <Text classprop="main-text" label={row.player} />
+          <Text classprop="main-text" label={row.name} />
         </td>
         <td className="table-data">
-          <Text classprop="main-text" label={row.amount} />
+          <Text classprop="main-text" label={row.score} />
         </td>
-        <td className="table-data">
+        <td className="table-data-time">
           <Text classprop="main-text" label={row.time} />
-        </td>
-        <td className="table-data">
-          <Text classprop="main-text" label={row.date} />
+          <Text classprop="main-text" label="sec" />
         </td>
       </tr>
     );
