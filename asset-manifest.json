@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/react-game/static/css/main.e8c4e3bb.chunk.css",
-    "main.js": "/react-game/static/js/main.b6b31767.chunk.js",
-    "main.js.map": "/react-game/static/js/main.b6b31767.chunk.js.map",
+    "main.css": "/react-game/static/css/main.1e4769cc.chunk.css",
+    "main.js": "/react-game/static/js/main.f6e6e093.chunk.js",
+    "main.js.map": "/react-game/static/js/main.f6e6e093.chunk.js.map",
     "runtime-main.js": "/react-game/static/js/runtime-main.fa8741b3.js",
     "runtime-main.js.map": "/react-game/static/js/runtime-main.fa8741b3.js.map",
     "static/js/2.b147dde8.chunk.js": "/react-game/static/js/2.b147dde8.chunk.js",
     "static/js/2.b147dde8.chunk.js.map": "/react-game/static/js/2.b147dde8.chunk.js.map",
     "index.html": "/react-game/index.html",
-    "static/css/main.e8c4e3bb.chunk.css.map": "/react-game/static/css/main.e8c4e3bb.chunk.css.map",
+    "static/css/main.1e4769cc.chunk.css.map": "/react-game/static/css/main.1e4769cc.chunk.css.map",
     "static/js/2.b147dde8.chunk.js.LICENSE.txt": "/react-game/static/js/2.b147dde8.chunk.js.LICENSE.txt",
     "static/media/BTC-OST.8d561e39.mp3": "/react-game/static/media/BTC-OST.8d561e39.mp3",
     "static/media/bitcoin-icon.6767a462.png": "/react-game/static/media/bitcoin-icon.6767a462.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.fa8741b3.js",
     "static/js/2.b147dde8.chunk.js",
-    "static/css/main.e8c4e3bb.chunk.css",
-    "static/js/main.b6b31767.chunk.js"
+    "static/css/main.1e4769cc.chunk.css",
+    "static/js/main.f6e6e093.chunk.js"
   ]
 }
